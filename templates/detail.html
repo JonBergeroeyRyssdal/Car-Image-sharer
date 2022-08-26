@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}{{ object.text }}{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-sm-10 offset-sm-1 py-5">
+            <h1 class="text-danger " style="font-weight: 900;">{{ object.text }}</h1>
+            <img src="{{ object.image.url }}" class="img-fluid rounded-circle border border-danger">
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Upload a new image{% endblock %}
+
+{% block body %}
+    <form method="POST" action="" enctype="multipart/form-data" class="col-sm-6 offset-3 py-5 my-5 text-danger display-7" style="font-weight: 900;">
+        <h2 class="display-1" style="font-weight: 900;">Upload an image of your favorite car!</h2>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div>
+            <button type="submit" class="btn btn-lg btn-danger">Submit form</button>
+        </div>
+    </form>
+{% endblock %}
